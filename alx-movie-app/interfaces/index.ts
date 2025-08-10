@@ -10,13 +10,27 @@ export interface ButtonProps {
 }
 
 export interface MovieProps {
-  title: string;
-  posterImage: string;
-  releaseYear: number;
+  id?: string
+  posterImage: string
+  releaseYear: string
+  title: string
+}
+
+interface PrimaryImage {
+  url: string
+}
+
+interface TitleText {
+  text: string
+}
+
+interface ReleaseYear {
+  year: string
 }
 
 export interface MoviesProps {
-  title: string;
-  posterImage?: string;
-  releaseYear: number;
+  id: string
+  primaryImage: PrimaryImage
+  titleText: TitleText
+  releaseYear: ReleaseYear
 }
